@@ -1,0 +1,13 @@
+body{
+    background-image: url("assets/city_bg.gif");
+    font-family: 'Special Elite', cursive;
+}
+
+.pomodoro_header{
+    font-family: 'Special Elite', cursive;
+    text-emphasis-style: bold;
+}
+
+#heading{
+    font-size: 100px;
+}
