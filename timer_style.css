@@ -1,7 +1,7 @@
 :root {
     --timer: rgba(5, 98, 197, 0.885);
-    --title: whitesmoke;
-    --buttons: black;
+    --title: rgb(245, 245, 245);
+    --buttons: rgb(122, 80, 235);
 }
 
 body{
@@ -26,17 +26,24 @@ body{
     height: 100%;
 }
 
+.title {
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    color: var(--title);
+    font-size: 10vw;
+    text-align: center;
+}
+
 .glass{
     padding-top: 100px;
     padding-bottom: 100px;
-    /* flex-direction: column; */
     justify-content: space-between;
     transition: 0.5s all ease;
-    /* height: 100%; */
     width: 100%;
     background: rgba( 185, 188, 194, 0.2 );
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.474);
-    backdrop-filter: blur( 2px );
+    backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 0px );
     border-radius: 15px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -44,15 +51,19 @@ body{
 }
 
 .modeSelector_Button{
-    /* display: flex; */
     width: 30%;
-    height: 100px;
+    height: 140px;
     justify-content: space-around;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    font-size:xx-large;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
 }
 
 
 .modeSelector_Button.active {
-    border: 2px solid var(--buttons);
+    border: 8px solid var(--buttons);
 }
 
 .timer{
@@ -69,8 +80,37 @@ body{
 /* Responsiveness */
 
 @media (max-width: 700px){
-    .modeSelector_Button{
+
+    .title{
+        top: 15px;
+        font-size: 20vw;
+    }
+    
+    .glass {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    
+      .modeSelector {
+        flex-direction: column;
+        width: 70%;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .modeSelector__Button {
         margin: 5px;
         font-size: 1rem;
+      }
+    
+      .timer {
+        color: var(--timer);
+        font-weight: 500;
+        font-size: 20vw;
+      }
+    
+      .play_stop {
+        width: 80%;
+        font-size: 3rem;
+      }
     }
-}
