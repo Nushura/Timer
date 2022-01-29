@@ -35,6 +35,8 @@ body{
     text-align: center;
 }
 
+/* For the glass morphic design, a website called 'Glassmorphism' was used. 
+That's where the segment below came from */
 .glass{
     padding-top: 100px;
     padding-bottom: 100px;

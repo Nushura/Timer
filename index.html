@@ -50,12 +50,13 @@
         var i = 0, heading;
         heading = "Pomodoro Timer"
 
+        // to give the typewriter effect on the heading
         function type_writer() {
             if(i<heading.length){
                 document.getElementById("heading").innerHTML += heading.charAt(i);
                 i++;
 
-                // 50 refers to the duration of the effect in milliseconds
+                // 100 refers to the duration of the effect in milliseconds
                 setTimeout(type_writer, 100);
             }
         }
